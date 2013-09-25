@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CombiSoft.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,13 @@ namespace CombiSoft.Controllers
 {
     public class HomeController : Controller
     {
+        private IClienteRepository _clienteRepository;
+
+
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            return View(_clienteRepository.GetAll());
 
-            return View();
         }
 
         public ActionResult About()

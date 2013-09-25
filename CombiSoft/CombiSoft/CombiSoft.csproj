@@ -194,6 +194,9 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Chofer.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ClienteIndexContext.cs" />
+    <Compile Include="Models\ClienteRepository.cs" />
+    <Compile Include="Models\IClienteRepository.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

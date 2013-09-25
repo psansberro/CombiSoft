@@ -5,11 +5,11 @@ using System.Web;
 
 namespace CombiSoft.Models
 {
-    enum TipoAbonoEnum { Abono_Completo, Medio_Abono, Eventual}
+    public enum TipoAbonoEnum { Abono_Completo, Medio_Abono, Eventual}
     public class Cliente: Persona
     {
-        private string _codigo;
-        public string Codigo
+        private int _codigo;
+        public int Codigo
         {
             get { return _codigo; }
             set { _codigo = value; }
