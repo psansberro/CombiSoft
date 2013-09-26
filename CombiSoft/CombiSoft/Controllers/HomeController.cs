@@ -9,12 +9,11 @@ namespace CombiSoft.Controllers
 {
     public class HomeController : Controller
     {
-        private IClienteRepository _clienteRepository;
-
+        
 
         public ActionResult Index()
         {
-            return View(_clienteRepository.GetAll());
+            return View();
 
         }
 

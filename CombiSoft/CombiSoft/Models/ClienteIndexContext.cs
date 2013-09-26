@@ -8,10 +8,17 @@ namespace CombiSoft.Models
 {
     public class ClienteIndexContext : DbContext
     {
-        public DbSet<Cliente> Clientes
+        public DbSet<ClienteModel> Clientes
         {
             get;
             set;
         }
+
+
+        
+    }
+    public class ClienteDb
+    {
+        public static Dictionary<int, ClienteModel> Clientes = new Dictionary<int, ClienteModel>();
     }
 }

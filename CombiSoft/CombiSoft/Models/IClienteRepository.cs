@@ -7,15 +7,15 @@ namespace CombiSoft.Models
 {
     interface IClienteRepository
     {
-        List<Cliente> GetAll();
+        List<ClienteModel> GetAll();
 
-        List<Cliente> GetByName(string name);
+        List<ClienteModel> GetByName(string name);
 
-        Cliente GetById(int id);
+        ClienteModel GetById(int id);
 
-        void Create(Cliente cliente);
+        void Create(ClienteModel cliente);
 
-        void Update(Cliente cliente);
+        void Update(ClienteModel cliente);
 
         void Delete(int id);
     }

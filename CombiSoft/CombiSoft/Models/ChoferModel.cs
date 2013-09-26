@@ -5,7 +5,7 @@ using System.Web;
 
 namespace CombiSoft.Models
 {
-    public class Chofer: Persona
+    public class ChoferModel: Persona
     {
         private string _lejago;
         public string Lejago
@@ -13,5 +13,7 @@ namespace CombiSoft.Models
             get { return _lejago; }
             set { _lejago = value; }
         }
+
+        public int Id { get; set; }
     }
 }

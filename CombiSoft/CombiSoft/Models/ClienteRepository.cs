@@ -8,7 +8,7 @@ namespace CombiSoft.Models
 {
     public class ClienteRepository : IClienteRepository
     {
-        public List<Cliente> GetAll()
+        public List<ClienteModel> GetAll()
         {
             using (var context = new ClienteIndexContext())
             {
@@ -17,7 +17,7 @@ namespace CombiSoft.Models
             }
         }
 
-        public List<Cliente> GetByName(string name)
+        public List<ClienteModel> GetByName(string name)
         {
             using (var context = new ClienteIndexContext())
             {
@@ -27,17 +27,17 @@ namespace CombiSoft.Models
             }
         }
 
-        public Cliente GetById(int id)
+        public ClienteModel GetById(int id)
         {
             using (var context = new ClienteIndexContext())
             {
                 return (from m in context.Clientes
-                        where m.Codigo == id
+                        where m.Id == id
                         select m).SingleOrDefault();
             }
         }
 
-        public void Create(Cliente cliente)
+        public void Create(ClienteModel cliente)
         {
             using (var context = new ClienteIndexContext())
             {
@@ -47,7 +47,7 @@ namespace CombiSoft.Models
             }
         }
 
-        public void Update(Cliente cliente)
+        public void Update(ClienteModel cliente)
         {
             using (var context = new ClienteIndexContext())
             {

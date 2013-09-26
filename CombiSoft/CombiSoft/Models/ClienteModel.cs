@@ -6,13 +6,13 @@ using System.Web;
 namespace CombiSoft.Models
 {
     public enum TipoAbonoEnum { Abono_Completo, Medio_Abono, Eventual}
-    public class Cliente: Persona
+    public class ClienteModel: Persona
     {
-        private int _codigo;
-        public int Codigo
+        private int _id;
+        public int Id
         {
-            get { return _codigo; }
-            set { _codigo = value; }
+            get { return _id; }
+            set { _id = value; }
         }
 
         private TipoAbonoEnum _tipoAbono;
